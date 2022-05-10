@@ -1,4 +1,3 @@
-
 const express = require('express');
 const mongoose = require('mongoose');
 
@@ -10,6 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.use(require('./routes'));
+
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/social-network-API', {
   useFindAndModify: false,
